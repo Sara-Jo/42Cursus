@@ -6,20 +6,14 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 13:29:19 by sjo               #+#    #+#             */
-/*   Updated: 2021/11/28 20:26:01 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/03 12:49:14 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    size_t          i;
-    unsigned char   *tmp;
-
-    i = 0;
-    tmp = s;
-    while (n--)
-        tmp[i++] = 0;
-    return (s);
+	while (n--)
+		*(char *)s++ = 0;
 }

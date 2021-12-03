@@ -6,16 +6,16 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 16:36:38 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/02 16:40:34 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/03 15:04:12 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#inlcude "libft.h"
+#include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (!s)
-        return ;
-    write(fd, s, ft_strlen(s));
-    write(fd, "\n", 1);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

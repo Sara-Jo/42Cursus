@@ -6,20 +6,20 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:13:25 by sjo               #+#    #+#             */
-/*   Updated: 2021/11/09 15:29:24 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/03 15:16:43 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(char *s, int c)
+char	*ft_strrchr(char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    while (i != 0 && s[i] != (char)c)
-        i--;
-    if (s[i] == (char)c)
-        return ((char *)s + i);
-    return (0);
+	i = 0;
+	while (s[i])
+		i++;
+	while (i != 0 && s[i] != (char)c)
+		i--;
+	if (s[i] == (char)c)
+		return ((char *)s + i);
+	return (0);
 }

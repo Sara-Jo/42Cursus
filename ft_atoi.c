@@ -6,31 +6,31 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:10:45 by sjo               #+#    #+#             */
-/*   Updated: 2021/11/09 11:14:01 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/03 12:29:09 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *s)
+int	ft_atoi(char *s)
 {
-    int i;
-    int sign;
-    int result;
+	int		i;
+	int		sign;
+	int		result;
 
-    i = 0;
-    sign = 1;
-    result = 0;
-    while ((s[i] >= 9 && s[i] <= 13) || s[i] == 32)
-        i++;
-    while (s[i] == '+' || s[i] == '-')
-    {
-        if (s[i] == '-')
-            sign *= -1;
-        i++;
-    }
-    while (s[i] >= '0' && s[i] <= '9')
-    {
-        result = result * 10 + (s[i] - '0');
-        i++;
-    }
-    return (sign * result);
+	i = 0;
+	sign = 1;
+	result = 0;
+	while ((s[i] >= 9 && s[i] <= 13) || s[i] == 32)
+		i++;
+	while (s[i] == '+' || s[i] == '-')
+	{
+		if (s[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		result = result * 10 + (s[i] - '0');
+		i++;
+	}
+	return (sign * result);
 }
