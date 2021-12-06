@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:05:29 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/06 15:43:06 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 16:19:31 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,8 @@ char	*ft_firstword(const char *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
-<<<<<<< HEAD
-	if (!(ptr = ft_calloc(len + 1, sizeof(char))))
-=======
-	if(!(ptr = ft_calloc(len + 1, sizeof(char))))
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
+	ptr = ft_calloc(len + 1, sizeof(char));
+	if (!ptr)
 		return (NULL);
 	ft_strlcpy(ptr, s, len + 1);
 	return (ptr);
@@ -73,14 +70,9 @@ char	**ft_inside_split(char const *s, char c, int nbr_of_words)
 
 	i = 0;
 	j = 0;
-<<<<<<< HEAD
-	if (!(ptr = (char **)ft_calloc(nbr_of_words + 1, sizeof(char *))))
+	ptr = (char **)ft_calloc(nbr_of_words + 1, sizeof(char *));
+	if (!ptr)
 		return (NULL);
-=======
-	if(!(ptr = (char **)ft_calloc(nbr_of_words + 1, sizeof(char *))))
-		return (NULL);
-
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 	while (i < nbr_of_words && s[j])
 	{
 		if (s[j] != c)

@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 21:56:45 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/03 15:18:10 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 16:04:55 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	isincluded(char c, char const *set)
 	int	i;
 
 	i = 0;
-	while (set[i])	
+	while (set[i])
 	{
 		if (set[i++] == c)
 			return (1);

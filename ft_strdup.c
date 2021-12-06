@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 20:31:59 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/06 15:42:58 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 16:06:50 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ char	*ft_strdup(const char *s1)
 {
 	size_t	len;
 	char	*dst;
-    
+
 	len = ft_strlen(s1);
-	if (!(dst = malloc((len + 1) * sizeof(char))))
+	dst = malloc((len + 1) * sizeof(char));
+	if (!dst)
 		return (NULL);
 	ft_strlcpy(dst, s1, len + 1);
 	return (dst);

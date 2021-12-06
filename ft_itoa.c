@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 14:46:30 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/06 15:45:02 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 16:29:04 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,12 @@ int	ft_intlen(int n)
 char	*ft_itoa(int n)
 {
 	char		*result;
-	int		len;
+	int			len;
 	long int	n_copy;
 
 	len = ft_intlen(n);
-	if (!(result = (char*)malloc(sizeof(char) * (len + 1))))
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (!result)
 		return (NULL);
 	result[len] = '\0';
 	n_copy = (long int)n;

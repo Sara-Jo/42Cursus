@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 19:57:48 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/06 15:45:10 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 16:05:44 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*mem;
 
-	if (!(mem = malloc(count * size)))
+	mem = malloc(count * size);
+	if (!mem)
 		return (NULL);
 	ft_bzero(mem, (count * size));
 	return (mem);
