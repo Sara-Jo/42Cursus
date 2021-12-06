@@ -6,11 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:51:48 by sjo               #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/12/06 10:25:19 by sjo              ###   ########.fr       */
-=======
-/*   Updated: 2021/12/03 12:50:54 by sjo              ###   ########.fr       */
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
+/*   Updated: 2021/12/06 15:46:01 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +36,7 @@ size_t				ft_strlcat(char *dest, const char *src, size_t dstsize);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char                *ft_strnstr(const char *haystack, const char *needle, size_t len);
-<<<<<<< HEAD
-=======
-int					ft_strcmp(const char *s1, const char *s2);
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
+
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
@@ -66,10 +59,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-<<<<<<< HEAD
 void	            ft_striteri(char *s, void (*f)(unsigned int, char*));
-=======
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);

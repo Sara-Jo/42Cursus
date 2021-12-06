@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 10:57:27 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/03 15:18:41 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 15:40:00 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-<<<<<<< HEAD
 	char	*tmp;
-=======
-	char *tmp;
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 
 	if (!s)
 		return (NULL);

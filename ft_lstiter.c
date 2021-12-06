@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 20:53:10 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/03 14:56:50 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 15:44:32 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-<<<<<<< HEAD
 	while (lst)
-=======
-	while(lst)
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 	{
 		f(lst->content);
 		lst = lst->next;

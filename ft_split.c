@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:05:29 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/03 15:09:24 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/06 15:43:06 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,7 @@ char	**ft_freeall(char **s)
 int	ft_wordcount(char const *s, char c)
 {
 	int	count;
-<<<<<<< HEAD
 	int	i;
-=======
-   	int	i;
->>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 
 	count = 0;
 	i = 0;
