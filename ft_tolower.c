@@ -6,13 +6,15 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:54:29 by sjo               #+#    #+#             */
-/*   Updated: 2021/11/09 10:55:01 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/03 15:19:13 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_tolower(char c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

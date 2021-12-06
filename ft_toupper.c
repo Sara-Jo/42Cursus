@@ -6,13 +6,15 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:52:12 by sjo               #+#    #+#             */
-/*   Updated: 2021/11/09 10:54:18 by sjo              ###   ########.fr       */
+/*   Updated: 2021/12/03 15:19:37 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_toupper(char c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        c -= 32;
-    return (c);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
