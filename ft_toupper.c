@@ -12,7 +12,11 @@
 
 #include "libft.h"
 
+<<<<<<< HEAD
 int	ft_toupper(int c)
+=======
+char	ft_toupper(char c)
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;

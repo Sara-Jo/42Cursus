@@ -21,7 +21,11 @@ void	*ft_memset(void *b, int c, size_t len)
 	new_dest = b;
 	val = c;
 	i = 0;
+<<<<<<< HEAD
 	while (i++ < len)
+=======
+	while(i++ < len)
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 		*new_dest++ = val;
 	return (b);
 }

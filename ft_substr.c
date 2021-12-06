@@ -14,7 +14,11 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+<<<<<<< HEAD
 	char	*tmp;
+=======
+	char *tmp;
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 
 	if (!s)
 		return (NULL);

@@ -17,7 +17,7 @@ int	isincluded(char c, char const *set)
 	int	i;
 
 	i = 0;
-	while (set[i])
+	while (set[i])	
 	{
 		if (set[i++] == c)
 			return (1);

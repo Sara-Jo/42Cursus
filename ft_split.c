@@ -29,7 +29,11 @@ char	**ft_freeall(char **s)
 int	ft_wordcount(char const *s, char c)
 {
 	int	count;
+<<<<<<< HEAD
 	int	i;
+=======
+   	int	i;
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 
 	count = 0;
 	i = 0;
@@ -55,7 +59,11 @@ char	*ft_firstword(const char *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
+<<<<<<< HEAD
 	if (!(ptr = ft_calloc(len + 1, sizeof(char))))
+=======
+	if(!(ptr = ft_calloc(len + 1, sizeof(char))))
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 		return (NULL);
 	ft_strlcpy(ptr, s, len + 1);
 	return (ptr);
@@ -69,8 +77,14 @@ char	**ft_inside_split(char const *s, char c, int nbr_of_words)
 
 	i = 0;
 	j = 0;
+<<<<<<< HEAD
 	if (!(ptr = (char **)ft_calloc(nbr_of_words + 1, sizeof(char *))))
 		return (NULL);
+=======
+	if(!(ptr = (char **)ft_calloc(nbr_of_words + 1, sizeof(char *))))
+		return (NULL);
+
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 	while (i < nbr_of_words && s[j])
 	{
 		if (s[j] != c)

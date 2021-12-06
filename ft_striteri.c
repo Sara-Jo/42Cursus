@@ -6,7 +6,11 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 16:15:10 by sjo               #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/12/06 10:16:05 by sjo              ###   ########.fr       */
+=======
+/*   Updated: 2021/12/03 15:11:13 by sjo              ###   ########.fr       */
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +18,22 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+<<<<<<< HEAD
 	int	i;
+=======
+	int i;
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 
 	if (!s || !f)
 		return ;
 	i = 0;
 	while (s[i])
 	{
+<<<<<<< HEAD
 		f(i, s + i);
+=======
+		f(i, s[i]);
+>>>>>>> c7f812667f2e79ef09acb8d093288f4f897c7be8
 		i++;
 	}
 }
