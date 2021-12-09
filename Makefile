@@ -6,7 +6,7 @@
 #    By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/03 11:52:19 by sjo               #+#    #+#              #
-#    Updated: 2021/12/03 12:47:57 by sjo              ###   ########.fr        #
+#    Updated: 2021/12/09 14:47:55 by sjo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ SRCS_2	=       ft_substr.c		    \
 				ft_putchar_fd.c	  	\
 				ft_putstr_fd.c	   	\
 				ft_putendl_fd.c	    \
-				ft_putnbr_fd.c	    
+				ft_putnbr_fd.c	    \
+			    ft_striteri.c	
 
 SRCS_BN =       ft_lstnew.c		    \
 				ft_lstsize.c		\
@@ -74,6 +75,12 @@ OBJS	= $(SRCS:.c=.o)
 
 OBJS_BONUS = $(SRCS_BN:.c=.o)
 
+ifdef WITH_BONUS
+	OBJECTS = $(OBJS) $(OBJS_BONUS)
+else
+	OBJECTS = $(OBJS)
+endif
+
 all : $(NAME)
 
 %.o : %.c
@@ -87,10 +94,10 @@ fclean : clean
 
 re : fclean all
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
-bonus : $(OBJS) $(OBJS_BONUS)
-	$(AR) $(ARFLAGS) $(NAME) $^
+bonus :
+	make WITH_BONUS=1 all
 
- .PHONY : all clean fclean re
+ .PHONY : all bonus clean fclean re
