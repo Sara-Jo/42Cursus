@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/23 17:04:52 by sjo               #+#    #+#             */
-/*   Updated: 2021/12/29 17:57:20 by sjo              ###   ########.fr       */
+/*   Created: 2022/01/03 14:24:49 by sjo               #+#    #+#             */
+/*   Updated: 2022/01/03 14:33:05 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,18 +105,18 @@ char *ft_read(int fd, char *save)
 
 char *get_next_line(int fd)
 {
-    static char *save;
+    static char *save[257];
     char        *line;
 
-    if (fd < 0 || BUFFER_SIZE <= 0)
+    if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
         return (0);
     // 개행문자를 만나거나 파일의 맨 끝에 도착할때까지 읽어들여서 save 에 저장
-    save = ft_read(fd, save);
-    if (!save)
+    save[fd] = ft_read(fd, save[fd]);
+    if (!save[fd])
         return (NULL);
     // 개행문자 전까지의 문자열을 line 에 저장
-    line = ft_get_line(save);
+    line = ft_get_line(save[fd]);
     // save 에 line 이후의 문자열만 남기기
-    save = ft_save(save);
+    save[fd] = ft_save(save[fd]);
     return (line);
 }
