@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:58:07 by sjo               #+#    #+#             */
-/*   Updated: 2022/01/24 17:26:14 by sjo              ###   ########.fr       */
+/*   Updated: 2022/01/26 16:35:15 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,35 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int ft_putnbr(int nbr, char *base)
+int	ft_putnbr(size_t nbr, char *base)
 {
-	int base_len;
-	int print_len;
+	// 왜 static 을 쓰는가?
+	// depth 를 쓰는 이유?s
+	static int	len;
+	static int	depth;
+	size_t		len_base;
+	int			len_copy;
 
-	base_len = ft_strlen(base);
-	print_len = 0;
-	if (nbr >= base_len)
+	len_base = ft_strlen(base);
+	depth++;
+	if (nbr >= len_base)
 	{
-		ft_putnbr(nbr / base_len, base);
-		ft_putnbr(nbr % base_len, base);
+		ft_putnbr(nbr / len_base, base);
+		ft_putnbr(nbr % len_base, base);
 	}
 	else
 	{
 		write(1, &base[nbr], 1);
-		print_len++;
+		len++;
 	}
-	return (print_len);
+	depth--;
+	len_copy = len;
+	if (depth == 0)
+		len = 0;	
+	return (len_copy);
 }
 
-int	ft_intlen(int n)
+static int	ft_intlen(int n)
 {
 	int	i;
 
@@ -54,6 +62,23 @@ int	ft_intlen(int n)
 		i++;
 		n *= -1;
 	}
+	while (n)
+	{
+		i++;
+		n /= 10;
+	}	
+	return (i);
+}
+
+static int	ft_untlen(unsigned int n)
+{
+	int	i;
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		i++;
 	while (n)
 	{
 		i++;
@@ -79,6 +104,29 @@ char	*ft_itoa(int n)
 		result[0] = '-';
 		n_copy *= -1;
 	}
+	if (n_copy == 0)
+		result[0] = '0';
+	while (n_copy)
+	{
+		result[len - 1] = (n_copy % 10) + '0';
+		n_copy /= 10;
+		len--;
+	}
+	return (result);
+}
+
+char	*ft_utoa(unsigned int n)
+{
+	char		*result;
+	unsigned int			len;
+	long int	n_copy;
+
+	len = ft_untlen(n);
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (!result)
+		return (NULL);
+	result[len] = '\0';
+	n_copy = (long int)n;
 	if (n_copy == 0)
 		result[0] = '0';
 	while (n_copy)

@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:13:47 by sjo               #+#    #+#             */
-/*   Updated: 2022/01/24 17:21:01 by sjo              ###   ########.fr       */
+/*   Updated: 2022/01/25 16:04:52 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ int	ft_printf_percent(const char **str)
 {
 	if ((char)**str == '%')
 	{
-		write(1, '%', 1);
-		str++;
+		write(1, "%", 1);
+		(*str)++;
 		return (1);
 	}
 	return (0);
 }
 
-int ft_print_s(const char **str, va_list ap)
+int ft_printf_s(const char **str, va_list ap)
 {
     char *s;
     int  i;
@@ -38,6 +38,7 @@ int ft_print_s(const char **str, va_list ap)
     {
         s = va_arg(ap, char*);
         i = 0;
+        (*str)++;
         if (!s)
             return (ft_write_null());
         while (s[i])
