@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:51:21 by sjo               #+#    #+#             */
-/*   Updated: 2022/01/28 17:00:36 by sjo              ###   ########.fr       */
+/*   Updated: 2022/01/28 17:46:13 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,23 @@ int ft_print_char_num(const char **str, va_list ap)
 {
     int i;
     
-    while (*str)
+    if ((char)**str == 'c')
     {
-        if ((char)**str == 'c')
-        {
-            i = va_arg(ap, int);
-            write(1, &i, 1);
-            (*str)++;
-            return (1);
-        }
-        else if ((char)**str == 's')
-            return (ft_printf_s(str, ap));
-        else if ((char)**str == 'x' || (char)**str == 'X' || (char)**str == 'p')
-            return (ft_printf_hex(str, ap));
-        else if ((char)**str == 'd' || (char)**str == 'i')
-            return (ft_printf_di(str, ap));
-        else if ((char)**str == 'u')
-            return (ft_printf_u(str, ap));
-        else if ((char)**str == '%')
-            return (ft_printf_percent(str));
+        i = va_arg(ap, int);
+        write(1, &i, 1);
+        (*str)++;
+        return (1);
     }
+    else if ((char)**str == 's')
+        return (ft_printf_s(str, ap));
+    else if ((char)**str == 'x' || (char)**str == 'X' || (char)**str == 'p')
+        return (ft_printf_hex(str, ap));
+    else if ((char)**str == 'd' || (char)**str == 'i')
+        return (ft_printf_di(str, ap));
+    else if ((char)**str == 'u')
+        return (ft_printf_u(str, ap));
+    else if ((char)**str == '%')
+        return (ft_printf_percent(str));
     return (0);
 }
 
