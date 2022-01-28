@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:58:07 by sjo               #+#    #+#             */
-/*   Updated: 2022/01/26 16:35:15 by sjo              ###   ########.fr       */
+/*   Updated: 2022/01/28 16:40:48 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,11 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_putnbr(size_t nbr, char *base)
+int	ft_putnbr(size_t nbr, char *base)	// 왜 size_t?
 {
-	// 왜 static 을 쓰는가?
-	// depth 를 쓰는 이유?s
 	static int	len;
 	static int	depth;
-	size_t		len_base;
+	size_t		len_base;	// 왜 size_t?
 	int			len_copy;
 
 	len_base = ft_strlen(base);
@@ -50,7 +48,7 @@ int	ft_putnbr(size_t nbr, char *base)
 	return (len_copy);
 }
 
-static int	ft_intlen(int n)
+int	ft_intlen(int n)
 {
 	int	i;
 
@@ -70,7 +68,7 @@ static int	ft_intlen(int n)
 	return (i);
 }
 
-static int	ft_untlen(unsigned int n)
+int	ft_untlen(unsigned int n)
 {
 	int	i;
 

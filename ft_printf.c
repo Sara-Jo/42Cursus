@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:51:21 by sjo               #+#    #+#             */
-/*   Updated: 2022/01/26 17:42:35 by sjo              ###   ########.fr       */
+/*   Updated: 2022/01/28 17:00:36 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int ft_print_char_num(const char **str, va_list ap)
             return (ft_printf_di(str, ap));
         else if ((char)**str == 'u')
             return (ft_printf_u(str, ap));
-        else
+        else if ((char)**str == '%')
             return (ft_printf_percent(str));
     }
     return (0);
@@ -51,7 +51,7 @@ int ft_printf(const char *str, ...)
         if (*str == '%')
         {
             str++;
-            len += ft_print_char_num(&str, ap) - 2;     // 왜 2를 빼는가? (하나는 conversion char 빼는것 같고, 하나는 모르겠음)
+            len += ft_print_char_num(&str, ap) - 2;     // 왜 2를 빼는가....?
         }
         else
         {
