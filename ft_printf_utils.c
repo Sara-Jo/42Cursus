@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:58:07 by sjo               #+#    #+#             */
-/*   Updated: 2022/01/28 16:40:48 by sjo              ###   ########.fr       */
+/*   Updated: 2022/02/07 13:19:27 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_putnbr(size_t nbr, char *base)	// 왜 size_t?
+int	ft_putnbr(size_t nbr, char *base)
 {
 	static int	len;
 	static int	depth;
-	size_t		len_base;	// 왜 size_t?
+	size_t		len_base;
 	int			len_copy;
 
 	len_base = ft_strlen(base);
@@ -44,7 +44,7 @@ int	ft_putnbr(size_t nbr, char *base)	// 왜 size_t?
 	depth--;
 	len_copy = len;
 	if (depth == 0)
-		len = 0;	
+		len = 0;
 	return (len_copy);
 }
 
@@ -81,7 +81,7 @@ int	ft_untlen(unsigned int n)
 	{
 		i++;
 		n /= 10;
-	}	
+	}
 	return (i);
 }
 
@@ -115,9 +115,9 @@ char	*ft_itoa(int n)
 
 char	*ft_utoa(unsigned int n)
 {
-	char		*result;
-	unsigned int			len;
-	long int	n_copy;
+	char			*result;
+	unsigned int	len;
+	long int		n_copy;
 
 	len = ft_untlen(n);
 	result = (char *)malloc(sizeof(char) * (len + 1));

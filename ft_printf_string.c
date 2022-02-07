@@ -6,15 +6,15 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:13:47 by sjo               #+#    #+#             */
-/*   Updated: 2022/01/25 16:04:52 by sjo              ###   ########.fr       */
+/*   Updated: 2022/02/07 13:48:20 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_write_null(void)
+int	ft_write_null(void)
 {
-    write(1, "(null)", 6);
+	write(1, "(null)", 6);
 	return (6);
 }
 
@@ -29,24 +29,24 @@ int	ft_printf_percent(const char **str)
 	return (0);
 }
 
-int ft_printf_s(const char **str, va_list ap)
+int	ft_printf_s(const char **str, va_list ap)
 {
-    char *s;
-    int  i;
+	char	*s;
+	int		i;
 
-    if ((char)**str == 's')
-    {
-        s = va_arg(ap, char*);
-        i = 0;
-        (*str)++;
-        if (!s)
-            return (ft_write_null());
-        while (s[i])
-        {
-            write(1, &s[i], 1);
-            i++;
-        }
-        return (ft_strlen(s));
-    }
-    return (0);
+	if ((char)**str == 's')
+	{
+		s = va_arg(ap, char *);
+		i = 0;
+		(*str)++;
+		if (!s)
+			return (ft_write_null());
+		while (s[i])
+		{
+			write(1, &s[i], 1);
+			i++;
+		}
+		return (ft_strlen(s));
+	}
+	return (0);
 }
