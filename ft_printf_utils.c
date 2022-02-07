@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:58:07 by sjo               #+#    #+#             */
-/*   Updated: 2022/02/07 13:19:27 by sjo              ###   ########.fr       */
+/*   Updated: 2022/02/07 15:07:32 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,32 +20,6 @@ size_t	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
-
-int	ft_putnbr(size_t nbr, char *base)
-{
-	static int	len;
-	static int	depth;
-	size_t		len_base;
-	int			len_copy;
-
-	len_base = ft_strlen(base);
-	depth++;
-	if (nbr >= len_base)
-	{
-		ft_putnbr(nbr / len_base, base);
-		ft_putnbr(nbr % len_base, base);
-	}
-	else
-	{
-		write(1, &base[nbr], 1);
-		len++;
-	}
-	depth--;
-	len_copy = len;
-	if (depth == 0)
-		len = 0;
-	return (len_copy);
 }
 
 int	ft_intlen(int n)
