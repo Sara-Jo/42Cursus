@@ -6,7 +6,7 @@
 #    By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/22 15:06:20 by sjo               #+#    #+#              #
-#    Updated: 2022/06/22 15:06:23 by sjo              ###   ########.fr        #
+#    Updated: 2022/06/23 02:04:20 by sjo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS_CLIENT = client.c \
 OBJS_SERVER = ${SRCS_SERVER:.c=.o}
 OBJS_CLIENT = ${SRCS_CLIENT:.c=.o}
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf
 
 all: ${SERVER} ${CLIENT}

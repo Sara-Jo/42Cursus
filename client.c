@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:05:59 by sjo               #+#    #+#             */
-/*   Updated: 2022/06/22 15:06:12 by sjo              ###   ########.fr       */
+/*   Updated: 2022/06/23 01:45:22 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int main(int argc, char **argv)
 		exit(0);
 	}
 	server_pid = ft_atoi(argv[1]);
+	// client pid 입력 예외처리
 	if (server_pid <= 0)
 		ft_putstr("Pid error!");
 	send_signal(server_pid, argv[2]);
