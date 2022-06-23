@@ -6,43 +6,50 @@
 #    By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/22 15:06:20 by sjo               #+#    #+#              #
-#    Updated: 2022/06/23 02:04:20 by sjo              ###   ########.fr        #
+#    Updated: 2022/06/23 16:59:43 by sjo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = minitalk
 SERVER = server
 CLIENT = client
-
-SRCS_SERVER = server.c \
-			  utils.c \
-
-
-SRCS_CLIENT = client.c \
-			  utils.c \
-
-
-OBJS_SERVER = ${SRCS_SERVER:.c=.o}
-OBJS_CLIENT = ${SRCS_CLIENT:.c=.o}
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CC = cc
+CFLAG = -Wall -Wextra -Werror
 RM = rm -rf
+SERVER_SRCS = server.c utils.c
+CLIENT_SRCS = client.c utils.c
+SERVER_OBJS = server.o utils.o
+CLIENT_OBJS = client.o utils.o
+SERVER_SRCS_BONUS = server_bonus.c utils_bonus.c
+CLIENT_SRCS_BONUS = client_bonus.c utils_bonus.c
+SERVER_OBJS_BONUS = server_bonus.o utils_bonus.o
+CLIENT_OBJS_BONUS = client_bonus.o utils_bonus.o
 
-all: ${SERVER} ${CLIENT}
+ifdef MAKE_BONUS
+	S_OBJ = $(SERVER_OBJS_BONUS)
+	C_OBJ = $(CLIENT_OBJS_BONUS)
+else
+	S_OBJ = $(SERVER_OBJS)
+	C_OBJ = $(CLIENT_OBJS)
+endif
 
-${SERVER}: ${OBJS_SERVER}
-	@${CC} ${OBJS_SERVER} ${CFLAGS} -o ${SERVER} -I.
+$(NAME) : $(SERVER) $(CLIENT)
+all : $(NAME)
 
-${CLIENT}: ${OBJS_CLIENT}
-	@${CC} ${OBJS_CLIENT} ${CFLAGS} -o ${CLIENT} -I.
+bonus :
+	$(MAKE) MAKE_BONUS=1 all
 
-clean:
-	@${RM} ${OBJS_SERVER}
-	@${RM} ${OBJS_CLIENT}
+$(SERVER) : $(S_OBJ)
+	$(CC) $(CFLAG) -o $@ $^
+$(CLIENT) : $(C_OBJ)
+	$(CC) $(CFLAG) -o $@ $^
 
-fclean: clean
-	@${RM} ${SERVER}
-	@${RM} ${CLIENT}
+clean :
+	$(RM) $(SERVER_OBJS) $(CLIENT_OBJS) $(SERVER_OBJS_BONUS) $(CLIENT_OBJS_BONUS)
+	
+fclean : clean
+	$(RM) $(SERVER) $(CLIENT)
 
-re: fclean all
+re : fclean all
 
-.PHONY: clean fclean re all
+.PHONY : all clean fclean re bonus
