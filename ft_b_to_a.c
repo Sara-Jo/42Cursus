@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:47:59 by sjo               #+#    #+#             */
-/*   Updated: 2022/06/29 17:53:04 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/03 20:06:32 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,9 @@ void ft_b_to_a(t_stack **stack_a, t_stack **stack_b, int count)
     while (count--)
     {
         if ((*stack_b)->num >= pivot && ++count_pa)
-            ft_ra(stack_a);
+            ft_pa(stack_a, stack_b);
         else if ((*stack_b)->num < pivot && ++count_rb)
-            ft_pb(stack_a, stack_b);
+            ft_rb(stack_b);
     }
     i = 0;
     // 이건 왜하는거임...

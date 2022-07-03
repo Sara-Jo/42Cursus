@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:43:42 by sjo               #+#    #+#             */
-/*   Updated: 2022/06/29 19:21:29 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/03 20:08:22 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main(int argc, char **argv)
 {
     int i;
-    int j;
+    // int j;
     t_stack *stack_a;
     t_stack *stack_b;
 
@@ -39,16 +39,23 @@ int main(int argc, char **argv)
             ft_sort_five(&stack_a, &stack_b);
         ft_a_to_b(&stack_a, &stack_b, ft_count_node(stack_a));
     }
-    printf("The number of elements are: %d\n", argc - 1);
-    printf("-----\n");
-    j = 0;
-    while (j < argc - 1)
-    {
-        printf("|%4d|\n", stack_a->num);
-        stack_a = stack_a->next;
-        j++;
-    }
-    printf("-----\n");
+    // printf("The number of elements are: %d\n", argc - 1);
+    // printf("-----\n");
+    // j = 0;
+    // while (j < argc - 1)
+    // {
+    //     printf("|%4d|\n", stack_a->num);
+    //     stack_a = stack_a->next;
+    //     j++;
+    // }
+
+    // for (int j = 0; j < argc - 1; j++)
+    // {
+    //     printf("|%4d|\n", stack_a->num);
+    //     stack_a = stack_a->next;
+    // }
+
+    // printf("-----\n");
     ft_stack_free(stack_a);
     return (0);
 }
