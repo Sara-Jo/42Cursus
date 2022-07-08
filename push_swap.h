@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:47:16 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/03 19:38:58 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/08 12:30:36 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void find_duplicate(int argc, char *argv[]);
 int is_ascending_order(int argc, char *argv[]);
 void check_int_min_max(int argc, char *argv[]);
 int ft_find_space(int argc, char *argv[]);
-void ft_check_string(int argc, char *argv[]);
+void ft_check_string(char *argv[]);
 void ft_check(int argc, char *argv[]);
 void ft_putchar(char c);
 void ft_putstr(char *str);

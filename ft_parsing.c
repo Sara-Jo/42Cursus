@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:51:00 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/03 19:40:57 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/08 12:31:53 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,10 @@ int ft_digit_check(char *str)
     return (1);
 }
 
-void ft_check_string(int argc, char **argv)
+void ft_check_string(char **argv)
 {
     int i;
 
-    //
-    (void)argc;
-    //
     i = 1;
     while (argv[i])
     {
@@ -71,9 +68,6 @@ void check_int_min_max(int argc, char **argv)
 {
     int i;
 
-    //
-    (void)argc;
-    //
     i = 1;
     while (i < argc)
     {
@@ -85,7 +79,7 @@ void check_int_min_max(int argc, char **argv)
 
 void ft_check(int argc, char **argv)
 {
-    find_duplicate(argc, &*argv);
-    ft_check_string(argc, &*argv);
-    check_int_min_max(argc, &*argv);
+    find_duplicate(argc, argv);
+    ft_check_string(argv);
+    check_int_min_max(argc, argv);
 }

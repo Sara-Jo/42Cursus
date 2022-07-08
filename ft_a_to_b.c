@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:07:51 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/03 19:59:50 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/08 12:32:25 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void ft_a_to_b(t_stack **stack_a, t_stack **stack_b, int count)
             ft_pb(stack_a, stack_b);
     }
     i = 0;
-    // 이건 왜하는거임...
     while (i++ < count_ra)
         ft_rra(stack_a);
     ft_a_to_b(stack_a, stack_b, count_ra);

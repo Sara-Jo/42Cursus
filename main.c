@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:43:42 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/03 20:08:22 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/08 12:28:07 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     i = 1;
     stack_a = NULL;
     stack_b = NULL;
-    ft_check(argc, &*argv);
+    ft_check(argc, argv);
     while (argv[i])
         ft_init_stack(&stack_a, ft_new_node(ft_atoi(argv[i++])));
     ft_print_node(stack_a);
