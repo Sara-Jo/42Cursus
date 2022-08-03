@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:56:19 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/15 14:14:16 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/18 10:09:25 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_stack_free(t_stack *stack)
 	t_stack	*tmp;
 
 	if (!stack)
-		return;
+		return ;
 	stack->prev->next = NULL;
 	while (stack)
 	{

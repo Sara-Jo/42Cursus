@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:47:16 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/15 13:56:39 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/18 10:16:13 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t		ft_strlen(const char *str);
 size_t		ft_strlcpy(char *dest, const char *src, size_t destsize);
 void		ft_exception_three_b_to_a(t_stack **stack_a, t_stack **stack_b);
 int			ft_exit_three_b_to_a(t_stack **stack_a, t_stack **stack_b,
-	int count);
+				int count);
 void		ft_b_to_a(t_stack **stack_a, t_stack **stack_b, int count);
 void		ft_exception_three_a_to_b(t_stack **stack_a, t_stack **stack_b);
 int			ft_exit_three_to_b(t_stack **stack_a, t_stack **stack_b, int count);

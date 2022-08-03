@@ -6,7 +6,7 @@
 #    By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/29 19:16:19 by sjo               #+#    #+#              #
-#    Updated: 2022/06/29 19:20:43 by sjo              ###   ########.fr        #
+#    Updated: 2022/07/18 15:27:16 by sjo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRCS	= main.c \
 		  ft_min_max_num.c \
 		  ft_nodes.c \
 		  ft_pa_pb.c \
-		  ft_parsing.c \
+		  ft_parsing1.c \
+		  ft_parsing2.c \
 		  ft_pivot.c \
 		  ft_pop_push.c \
 		  ft_ra_rb_rr.c \
@@ -37,7 +38,7 @@ RM 		= rm -f
 AR		= gcc 
 
 .c.o:
-		gcc -Wall -Wextra -Werror -g3 -c $< -o ${<:.c=.o}
+		gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
 
 all:	${NAME}
 

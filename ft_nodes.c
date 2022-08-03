@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:22:33 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/15 14:12:41 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/18 15:41:24 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_init_stack(t_stack **stack, t_stack *new)
 	if (!stack || !new)
 		return ;
 	if (!*stack)
-		*stack = new
+		*stack = new;
 	else
 	{
 		(*stack)->prev->next = new;
@@ -28,7 +28,7 @@ void	ft_init_stack(t_stack **stack, t_stack *new)
 	if (ft_check_double(*stack))
 	{
 		free(*stack);
-		ft_error_exit("Error! Duplicate!\n");
+		ft_error_exit("Error \n");
 	}
 }
 

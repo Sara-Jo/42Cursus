@@ -6,11 +6,11 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 21:43:42 by sjo               #+#    #+#             */
-/*   Updated: 2022/07/15 13:58:34 by sjo              ###   ########.fr       */
+/*   Updated: 2022/07/18 15:41:59 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 #include "push_swap.h"
 
 int	main(int argc, char **argv)
@@ -25,7 +25,6 @@ int	main(int argc, char **argv)
 	ft_check(argc, argv);
 	while (argv[i])
 		ft_init_stack(&stack_a, ft_new_node(ft_atoi(argv[i++])));
-	ft_print_node(stack_a);
 	if (argc >= 2)
 	{
 		if (argc - 1 == 2)
