@@ -6,11 +6,12 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:52:01 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/09 10:52:04 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/15 14:18:32 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cctype>
 
 int main(int argc, char **argv)
 {
