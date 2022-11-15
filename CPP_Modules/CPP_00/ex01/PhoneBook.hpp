@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:44:52 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/09 11:44:54 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/15 15:27:00 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 
 class PhoneBook
 {
-private:
-  Contact _contacts[8];
-  int _contactIndex;
-  std::string _readLine() const;
-  std::string _resizing(std::string str) const;
-  void _printShortInfo() const;
-  void _printDetailInfo(Contact contact) const;
-  void _addContact();
-  void _searchContact() const;
+  private:
+    Contact contacts[8];
+    int contactIndex;
+    std::string readLine() const;
+    std::string resizing(std::string str) const;
+    void printShortInfo() const;
+    void printDetailInfo(Contact contact) const;
+    void addContact();
+    void searchContact() const;
 
-public:
-  PhoneBook();
-  ~PhoneBook();
+  public:
+    PhoneBook();
+    ~PhoneBook();
 
-  void process();
+    void process();
 };
 
 #endif

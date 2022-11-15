@@ -6,14 +6,14 @@
 #    By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 11:45:10 by sjo               #+#    #+#              #
-#    Updated: 2022/11/09 11:54:34 by sjo              ###   ########.fr        #
+#    Updated: 2022/11/15 14:22:06 by sjo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=phoneBook
 
-CC = c++
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CXX = c++
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 SRCS = main.cpp\
 	   Contact.cpp\
@@ -24,10 +24,10 @@ OBJS = $(SRCS:.cpp=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o : %.cpp
-	$(CC) $(CFLAGS) -c -o $@ $^
+	$(CXX) $(CXXFLAGS) -c -o $@ $^
 
 clean :
 	rm -f $(OBJS)
