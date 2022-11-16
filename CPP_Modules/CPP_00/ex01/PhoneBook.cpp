@@ -6,15 +6,13 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:59:37 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/15 15:56:10 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/16 12:48:22 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// 인클루드한 라이브러리들 어디서 사용되는지 다시 확인하기
 #include "PhoneBook.hpp"
-#include <stdlib.h>
-#include <iomanip>
 #include "Contact.hpp"
+#include <iomanip>
 #include <cctype>
 
 PhoneBook::PhoneBook()
