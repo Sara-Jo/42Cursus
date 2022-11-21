@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:59:37 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/16 12:48:22 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/21 18:34:11 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,17 +79,17 @@ bool is_number(std::string str) {
 
 void PhoneBook::addContact()
 {
-	std::string	first_name;
-	std::string	last_name;
+	std::string	firstname;
+	std::string	lastname;
 	std::string	nickname;
 	std::string	phone_number;
 	std::string	darkest_secret;
   int index = contactIndex % 8;
 
   std::cout << "Enter first name: ";
-  first_name = readLine();
+  firstname = readLine();
   std::cout << "Enter last name: ";
-  last_name = readLine();
+  lastname = readLine();
   std::cout << "Enter nickname: ";
   nickname = readLine();
   while (1) {
@@ -101,8 +101,8 @@ void PhoneBook::addContact()
   std::cout << "Enter darkest secret: ";
   darkest_secret = readLine();
   
-  contacts[index].setFirstName(first_name);
-  contacts[index].setLastName(last_name);
+  contacts[index].setFirstName(firstname);
+  contacts[index].setLastName(lastname);
   contacts[index].setNickName(nickname);
   contacts[index].setPhoneNumber(phone_number);
   contacts[index].setDarkestSecret(darkest_secret);

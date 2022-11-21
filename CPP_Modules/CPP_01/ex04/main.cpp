@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 19:02:41 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/17 19:34:07 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/21 18:34:11 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int main(int argc, char **argv)
         std::cout << "Cannot open the input file" << std::endl;
         return (-1);
     }
-    std::string file_name = (std::string)argv[1] + ".replace";
+    std::string filename = (std::string)argv[1] + ".replace";
     
-    std::ofstream ofs(file_name);
+    std::ofstream ofs(filename);
     if (!ofs.is_open())
     {
         std::cout << "Cannot open the output file" << std::endl;
