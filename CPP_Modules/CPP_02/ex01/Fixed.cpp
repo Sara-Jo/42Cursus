@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 21:52:18 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/20 21:53:50 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/21 15:35:57 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ Fixed &Fixed::operator=(const Fixed &obj)
 
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return rawBits;
 }
 
