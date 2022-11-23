@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Claptrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 18:33:11 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/23 15:08:47 by sjo              ###   ########.fr       */
+/*   Created: 2022/11/23 16:37:20 by sjo               #+#    #+#             */
+/*   Updated: 2022/11/23 16:43:06 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ class ClapTrap {
 
   ClapTrap& operator=(const ClapTrap& obj);
 
-  void attack(const std::string& target);
+  void attack(std::string const& target);
   void takeDamage(unsigned int amount);
   void beRepaired(unsigned int amount);
 
- private:
+ protected:
   std::string name;
   unsigned int hitPoints;
   unsigned int energyPoints;

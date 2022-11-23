@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 18:33:37 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/23 15:11:08 by sjo              ###   ########.fr       */
+/*   Created: 2022/11/23 16:37:25 by sjo               #+#    #+#             */
+/*   Updated: 2022/11/23 16:43:00 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& obj) {
   return *this;
 }
 
-void ClapTrap::attack(const std::string& target) {
+void ClapTrap::attack(std::string const& target) {
   if (hitPoints == 0) {
     std::cout << "ClapTrap " << name << " is dead." << std::endl;
   } else if (energyPoints == 0) {
