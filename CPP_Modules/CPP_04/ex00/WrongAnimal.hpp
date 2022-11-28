@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:41:40 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 13:55:05 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 16:15:29 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class WrongAnimal {
   std::string getType() const;
 
  protected:
-  std::string _type;
+  std::string type;
 };
 
 #endif

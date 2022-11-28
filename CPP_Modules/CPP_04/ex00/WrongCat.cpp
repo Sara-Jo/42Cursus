@@ -6,14 +6,14 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:42:40 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 13:48:25 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 16:15:31 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat() : WrongAnimal() {
-  _type = "WrongCat";
+  type = "WrongCat";
   std::cout << "WrongCat constructor called" << std::endl;
 };
 
@@ -28,7 +28,7 @@ WrongCat::~WrongCat() {
 
 WrongCat& WrongCat::operator=(const WrongCat& obj) {
   std::cout << "WrongCat assignation operator called" << std::endl;
-  _type = obj._type;
+  type = obj.type;
   return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:39:53 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 16:15:28 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 16:19:12 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Animal::Animal(const Animal& obj) {
 
 Animal& Animal::operator=(const Animal& obj) {
   std::cout << "Animal assignation operator called" << std::endl;
-  type = obj.type;
+  this->type = obj.type;
   return *this;
 }
 
