@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 16:00:20 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 16:14:27 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 18:14:05 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,6 @@ AAnimal& AAnimal::operator=(const AAnimal& obj) {
 
 AAnimal::~AAnimal() {
   std::cout << "AAnimal destructor called" << std::endl;
-}
-
-void AAnimal::makeSound() const {
-  std::cout << "AAnimal sound" << std::endl;
 }
 
 std::string AAnimal::getType() const {

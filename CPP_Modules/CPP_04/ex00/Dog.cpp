@@ -6,14 +6,14 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:40:31 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 13:48:25 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 18:19:22 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() : Animal() {
-  _type = "Dog";
+  type = "Dog";
   std::cout << "Dog constructor called" << std::endl;
 };
 
@@ -28,7 +28,7 @@ Dog::~Dog() {
 
 Dog& Dog::operator=(const Dog& obj) {
   std::cout << "Dog assignation operator called" << std::endl;
-  _type = obj._type;
+  type = obj.type;
   return *this;
 }
 

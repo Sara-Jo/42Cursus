@@ -6,14 +6,14 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:40:57 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 13:48:25 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 18:19:46 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat() : Animal() {
-  _type = "Cat";
+  type = "Cat";
   std::cout << "Cat constructor called" << std::endl;
 };
 
@@ -28,7 +28,7 @@ Cat::~Cat() {
 
 Cat& Cat::operator=(const Cat& obj) {
   std::cout << "Cat assignation operator called" << std::endl;
-  _type = obj._type;
+  type = obj.type;
   return *this;
 }
 
