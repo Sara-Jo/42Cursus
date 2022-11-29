@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:08:57 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 15:11:03 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 18:26:49 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ class Brain {
   ~Brain();
 
   Brain& operator=(const Brain& obj);
+  std::string getIdea(size_t i);
+  void setIdea(int i, std::string idea);
 
  private:
-  std::string _ideas[100];
+  std::string ideas[100];
 };
 
 #endif

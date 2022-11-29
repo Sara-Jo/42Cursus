@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:09:17 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 15:11:03 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/28 18:26:45 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,21 @@ Brain::~Brain(void) {
 Brain& Brain::operator=(const Brain& obj) {
   std::cout << "Brain assignation operator called" << std::endl;
   for (int i = 0; i < 100; i++)
-    this->_ideas[i] = obj._ideas[i];
+    this->ideas[i] = obj.ideas[i];
   return *this;
+}
+
+std::string Brain::getIdea(size_t i) {
+    if (i < 100)
+      return (this->ideas[i]);
+    else
+      return ("Invalid index.");
+}
+
+void	Brain::setIdea(int i, std::string idea)
+{
+	if (i < 100)
+		this->ideas[i] = idea;
+	else
+		std::cout << "Invalid index." << std::endl;
 }
