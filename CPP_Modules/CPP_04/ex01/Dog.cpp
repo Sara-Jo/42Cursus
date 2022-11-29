@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:40:31 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 17:57:20 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/29 15:12:24 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ Dog::Dog(const Dog& obj) {
 }
 
 Dog::~Dog() {
-  std::cout << "Dog destructor called" << std::endl;
   delete this->brain;
+  std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& obj) {

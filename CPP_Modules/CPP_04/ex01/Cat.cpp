@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:40:57 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 16:40:14 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/29 15:12:19 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ Cat::Cat(const Cat& obj) {
 }
 
 Cat::~Cat() {
-  std::cout << "Cat destructor called" << std::endl;
   delete this->brain;
+  std::cout << "Cat destructor called" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& obj) {

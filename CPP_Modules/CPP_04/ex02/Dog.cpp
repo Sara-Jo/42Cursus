@@ -6,32 +6,40 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:40:31 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/28 16:16:17 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/29 15:12:38 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() : AAnimal() {
-  type = "Dog";
   std::cout << "Dog constructor called" << std::endl;
+  this->type = "Dog";
+  this->brain = new Brain();
 };
 
 Dog::Dog(const Dog& obj) {
   std::cout << "Dog copy constructor called" << std::endl;
+  this->brain = new Brain();
   *this = obj;
 }
 
 Dog::~Dog() {
+  delete this->brain;
   std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& obj) {
   std::cout << "Dog assignation operator called" << std::endl;
-  type = obj.type;
+  this->type = obj.type;
+  *this->brain = *obj.brain;
   return *this;
 }
 
 void Dog::makeSound() const {
   std::cout << "Bowwow! Bowwow!" << std::endl;
+}
+
+Brain *Dog::getBrain() const {
+  return (this->brain);
 }
