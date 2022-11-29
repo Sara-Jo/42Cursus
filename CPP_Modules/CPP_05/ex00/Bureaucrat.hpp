@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:38:48 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/29 13:39:16 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/29 20:09:03 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,14 @@ class Bureaucrat {
   void incrementGrade(void);
   void decrementGrade(void);
 
-  std::runtime_error GradeTooHighException();
-  std::runtime_error GradeTooLowException();
+  class GradeTooHighException : public std::exception {
+      public:
+        const char* what() const throw();
+    };
+    class GradeTooLowException : public std::exception {
+      public:
+        const char* what() const throw();
+    };
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj);
