@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 00:43:12 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/30 01:27:10 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/30 14:53:03 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,27 +31,24 @@ Intern &Intern::operator=(const Intern &obj)
     return (*this);
 }
 
-Form *Intern::makeForm(const std::string formName, const std::string target)
-{
-    std::string types[] = {
-        "robotomy request",
-        "presidential pardon",
-        "shrubbery creation"};
-
-    Form *forms[] = {
-        new RobotomyRequestForm(target),
-        new PresidentialPardonForm(target),
-        new ShrubberyCreationForm(target)};
-
-    for (int i = 0; i < 3; i++)
-    {
-        if (types[i] == formName)
-        {
-            return (forms[i]);
-        }
-    }
-    throw Intern::UnknownFormException();
-    return (NULL);
+Form* Intern::makeForm(const std::string formName, const std::string target) {
+  std::string formNames[3] = {"presidential pardon", "robotomy request",
+                              "shrubbery creation"};
+  int i = 0;
+  for (; i < 3; i++) {
+    if (formName == formNames[i])
+      break;
+  }
+  switch (i) {
+    case 0:
+      return (new PresidentialPardonForm(target));
+    case 1:
+      return (new RobotomyRequestForm(target));
+    case 2:
+      return (new ShrubberyCreationForm(target));
+  }
+  throw Intern::UnknownFormException();
+  return (NULL);
 }
 
 const char *Intern::UnknownFormException::what() const throw()

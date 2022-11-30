@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 00:43:00 by sjo               #+#    #+#             */
-/*   Updated: 2022/11/30 01:26:58 by sjo              ###   ########.fr       */
+/*   Updated: 2022/11/30 14:52:48 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 
     Intern &operator=(const Intern &obj);
 
-    Form *makeForm(const std::string formName, const std::string target);
+    Form* makeForm(const std::string formName, const std::string target);
 
     class UnknownFormException : public std::exception
     {
