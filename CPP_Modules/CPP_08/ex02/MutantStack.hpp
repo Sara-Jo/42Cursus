@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:13:05 by sjo               #+#    #+#             */
-/*   Updated: 2022/12/01 00:13:13 by sjo              ###   ########.fr       */
+/*   Updated: 2022/12/01 15:36:45 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,19 @@ public:
     }
     ~MutantStack() {}
 
-    typedef typename std::stack<T>::container_type::iterator iterator;
-    typedef typename std::stack<T>::container_type::const_iterator const_iterator;
-    typedef
-        typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
-    typedef typename std::stack<T>::container_type::const_reverse_iterator
-        const_reverse_iterator;
+    typedef typename std::stack<T>::container_type::iterator                iterator;
+    typedef typename std::stack<T>::container_type::const_iterator          const_iterator;
+    typedef typename std::stack<T>::container_type::reverse_iterator        reverse_iterator;
+    typedef typename std::stack<T>::container_type::const_reverse_iterator  const_reverse_iterator;
 
-    iterator begin() { return (std::stack<T>::c.begin()); }
-    iterator end() { return (std::stack<T>::c.end()); }
-    const_iterator begin() const { return (std::stack<T>::c.begin()); }
-    const_iterator end() const { return (std::stack<T>::c.end()); }
-    reverse_iterator rbegin() { return (std::stack<T>::c.rbegin()); }
-    reverse_iterator rend() { return (std::stack<T>::c.rend()); }
-    const_reverse_iterator rbegin() const { return (std::stack<T>::c.rbegin()); }
-    const_reverse_iterator rend() const { return (std::stack<T>::c.rend()); }
+    iterator                begin() { return (std::stack<T>::c.begin()); }
+    iterator                end() { return (std::stack<T>::c.end()); }
+    const_iterator          begin() const { return (std::stack<T>::c.begin()); }
+    const_iterator          end() const { return (std::stack<T>::c.end()); }
+    reverse_iterator        rbegin() { return (std::stack<T>::c.rbegin()); }
+    reverse_iterator        rend() { return (std::stack<T>::c.rend()); }
+    const_reverse_iterator  rbegin() const { return (std::stack<T>::c.rbegin()); }
+    const_reverse_iterator  rend() const { return (std::stack<T>::c.rend()); }
 };
 
 #endif
