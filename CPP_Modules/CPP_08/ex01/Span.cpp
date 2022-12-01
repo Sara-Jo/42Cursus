@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:03:44 by sjo               #+#    #+#             */
-/*   Updated: 2022/12/01 00:07:56 by sjo              ###   ########.fr       */
+/*   Updated: 2022/12/01 14:57:13 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ Span::Span() : _n(0), _v() {}
 
 Span::Span(unsigned int N) : _n(N), _v() {}
 
-Span::Span(const Span &obj)
+Span::Span(const Span &obj): _n(obj._n), _v(obj._v)
 {
-    *this = obj;
 }
 
 Span::~Span() {}
@@ -44,7 +43,7 @@ void Span::addNumber(std::vector<int>::iterator begin,
                      std::vector<int>::iterator end)
 {
     if (_v.size() + (end - begin) > _n)
-        throw Span::SpanIsFullException();
+        throw Span::NotEnoughSpaceException();
     for (std::vector<int>::iterator it = begin; it != end; it++)
         _v.push_back(*it);
 }
@@ -75,6 +74,11 @@ int Span::longestSpan()
 const char *Span::SpanIsFullException::what() const throw()
 {
     return "Can't add another number, span is full";
+}
+
+const char *Span::NotEnoughSpaceException::what() const throw()
+{
+    return "Not enough space to add numbers";
 }
 
 const char *Span::SizeTooSmallException::what() const throw()

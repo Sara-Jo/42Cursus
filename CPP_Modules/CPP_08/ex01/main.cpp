@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:04:05 by sjo               #+#    #+#             */
-/*   Updated: 2022/12/01 00:10:04 by sjo              ###   ########.fr       */
+/*   Updated: 2022/12/01 15:00:55 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(void)
         std::cout << std::endl;
     }
 
-    std::cout << "test#2 Span is full error" << std::endl;
+    std::cout << "test#2 Not enough space error" << std::endl;
     {
         try
         {
@@ -98,8 +98,8 @@ int main(void)
     std::cout << "test#6 sp2" << std::endl;
     {
         Span sp2 = Span(5);
-        sp2.addNumber(-1);
         sp2.addNumber(-2);
+        sp2.addNumber(-1);
         sp2.addNumber(5);
         sp2.addNumber(10);
         sp2.addNumber(11);

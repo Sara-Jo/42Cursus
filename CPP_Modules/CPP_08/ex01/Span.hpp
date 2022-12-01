@@ -6,7 +6,7 @@
 /*   By: sjo <sjo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:03:23 by sjo               #+#    #+#             */
-/*   Updated: 2022/12/01 00:05:46 by sjo              ###   ########.fr       */
+/*   Updated: 2022/12/01 14:55:16 by sjo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,13 @@ public:
     public:
         virtual const char *what() const throw();
     };
+
+    class NotEnoughSpaceException : public std::exception
+    {
+    public:
+        virtual const char *what() const throw();
+    };
+
     class SizeTooSmallException : public std::exception
     {
     public:
